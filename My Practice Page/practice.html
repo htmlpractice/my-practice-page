@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="style.css">
+   <title>Practice Page - my HTML</title>
+   <!-- Link to a Favicon -->
+   <link rel="icon" type="image/ico" href="favicon.ico" />
+</head>
+<body id="top">
+
+<section>
+<header>
+  <h1>My Practice Page</h1>
+  <h3> <i>Where the work gets done</i> </h3>
+</header>
+
+<!-- Embedded / internal links -->
+ <a href="practice1a.html">Refresh this page</a>
+   &nbsp;
+ <a href="practice1a.html" target="_blank">Open in a new tab </a>
+   &nbsp;
+ <a href="practice1a.html/#end">Skip to the end </a>
+</section>
+  
+<section>      
+  <h2> Introduction </h2>
+    <p> Hol&aacute;! This is the page that I use for practicing typing up HTML documents&ndash;with CSS! The CSS file is a separate file to this HTML file you're currently reading in the browser; it tells the browser how the text in the HTML file should be styled.</p>
+</section>
+
+<section>
+  <h2> Text styling &amp; CSS </h2>
+    <p> Here you can see that I have used CSS to make all main headers <a class="c2">red</a> and all main paragraphs dark <a class="c3">blue</a> by default. As you can see, I can also change the colour of individual words and sentences. I will explain how shortly.</p>
+    <p> Withhout having to get into CSS, we can use the <code>strong</code> or <code>b</code> elements to make certain words show up in <b>bold</b>, by putting the word inside a tag with the element, like this: </p>
+    <p> <code> &lt;bold&gt; word &lt;/bold&gt; </code> </p>
+    <p> In the same way we can use <code>em</code> or <code>i</code> to <i>italicize</i> words. Do note, however, that although <code>strong</code> and <code>b</code> have the same effect on the appearance of the text, as do <code>em</code> and <code>i</code>, these elements have different semantics, or meanings. </p>
+    <p> We can define certain parts of our document by class to customize them however we want to. It's simple: I make an entry for class "c1" in the CSS file, and specify that the font for anything that's class "c1" must be <a class="c1"> green </a> and 26px in size. Then I go to the HTML and bracket the word I want to change (eg. "green") with an anchor tag and insert the <code>class</code> element, which looks like this: </p>
+    <p> <code>&lt;a class="c1"&gt; green &lt;/a&gt;</code> </p>
+    <p> Bingo! <a class="c1">Big green text!</a> </p>
+    <p> If you want to do this with a whole paragraph, just insert the <code>class="x"</code> element after the <code>p</code> in the paragraph tag. This is how I set the colour and size of all the font on this page. You can have as many classes as you want.</p>
+</section>   
+
+<section>
+  <h2> Links and Multimedia </h2>
+    <p> Cool! Now let's connect to the Internet with the &lt;a&gt; (anchor) and &lt;href=&gt; (hyperlink reference) elements. Hyperlinks are easy - here's a link to <a href="https://coursera.org" target="_blank">Coursera </a> in a new tab (using the &lt;target=&gt; element).</p> 
+    <p> Let's try something a bit harder, which is to put an image off the web on this page using the &lt;img src=&gt; element. </p>
+ <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frender.fineartamerica.com%2Fimages%2Frendered%2Fsmall%2Fposter%2Fimages-square-real%2Fmallard-duck-swimming-jeff-stein.jpg&f=1&nofb=1" width="250px" height="250px" title="A mallard duck" alt="A mallard duck">
+    <p> There we go. I just searched "duck" in my browser to find this image and copy-pasted the URL. Move your mouse cursor over the image and a little text box should pop up, which simply says "A mallard duck". Adding a text box like this is as simple as including the "title=" element inside your "img src=" box. I made this text the same as the "alt=" text that you must include whenever you insert an image in this way, in case the browser can't load the image for some reason.</p>
+    <p> By the way, images, like text, can also be used as links. Click the rubber ducky to go to the Wikipedia page about ducks.</p>
+ <a href="https://en.wikipedia.org/wiki/Anatinae"> <img src="ducko.jpg" width="5%" title="Click to learn about ducks!" alt="A yellow duck"/> </a>
+    <p> We are not limited to images in our choice of media. We can also insert audio files, like this recitation of a poem, using the &lt;audio src=&gt; element: </p>
+ <audio src="The-Door-by-Robert-Creeley.mp3" controls> Audio poem </audio>
+  <br>
+    <p> Of course, we can insert videos as well! Here we use the &lt;video src=&gt; element: </p>
+ <video src="HEY.mp4" controls> HEYYEYAAEYAAAEYAEYAA </video>
+       <br>
+    <p> We can also make the video skip to a certain part, and loop automatically: </p>
+ <video src="HEY.mp4#t=01:24" controls loop> The same video but I skipped to the where the HEYYEYAAEYAAAEYAEYAA starts. </video>
+  <br>
+</section>
+
+<section>
+  <h2> Mouseover Events </h2>
+    <p> Remember how the two images I used had some text that you could see when you moused over it? We can dig a little deeper into these "mouseover events" and see what else we can do to make our page feel more interactive. Check out this header element:</p>
+
+<h1 id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">Mouse Over Me</h1>
+
+    <p> Can you see the text colour change as you move the mouse cursor over it? We can do it for a normal paragraph too:</p>
+
+<p id="demo2" onmouseover="mouseOver2()" onmouseout="mouseOut2()"><strong>Mouse Over Me.</strong></p>
+
+    <p> What I've done here is inserted script, or code, into the body of the HTML. For each of those "Mouse Over Me's" I have typed in a few short lines of "function" script that tell the browser what to do when when the mouse cursor is over the text, and when the mouse cursor is not over the text. For example, you can tell the browser to display a specific heading as red normally but to display as black when you mouse over it. The "id=" function allows me specify what text to apply the "function" script to.</p>
+  <cite> Find out how to do it yourself at <a href="https://www.w3schools.com/jsref/event_onmouseover.asp">this link.</a> </cite>
+</section>
+
+<section>
+  <h2> Tables </h2>
+    <p> If we ever need to display data, eg. for a research website, we can use tables. This uses the &lt;table&gt; element, with &lt;tr&gt; (table row) for rows, &lt;td&gt; (table data) for data cells, and &lt;th&gt; for table headings. Right click on the page and click "View Page Source" to see the HTML code for this simple table with data points 1-9 and headings in the <i>x</i> and <i>y</i> axes:</p>
+<thead> Heading </thead>
+ <table border="1" width="30%">
+ <caption> Fig 1. A simple table.</caption>
+<tbody>
+    <tr> <th>   </th> <th> a </th> <th> b </th> <th> c </th>
+    <tr> <th> A </th> <td> 1 </td> <td> 2 </td> <td> 3 </td>
+    <tr> <th> B </th> <td> 4 </td> <td> 5 </td> <td> 6 </td>
+    <tr> <th> C </th> <td> 7 </td> <td> 8 </td> <td> 9 </td>
+</tbody>
+<tfoot> </tfoot>
+   
+ </table>
+
+</section>
+
+<section>
+  <h2> Lists </h2>
+
+<p>Here's a quick general definition of what lists are:</p>
+
+<dl> <dt>Lists</dt> <dd>"Information arranged in rows of lines."</dd> </dl>
+
+<p>Definitions in HTML are started by &lt;dl&gt; tags embedded with &lt;dt&gt; (definition term) and &lt;dd&gt; (definition definition) tags. Here's an actual example of a list on a webpage:</p>
+
+<ol>
+    <li value="1">Vegetables
+       <ul>
+            <li>Brocolli</li>    
+       </ul>
+    </li>
+    <li value="2">Fruit
+       <ul>
+            <li>Apples</li>
+            <li><i>Bananas</i></li>    
+       </ul>
+    </li>
+</ol>
+ 
+</section>
+
+&nbsp;
+
+<footer>    
+  <hr>
+    <h4> That's all for now. <a href="#top">Click here</a> to return to the top of the page.</h4>
+  <h2> Thanks for visiting! </h2>
+  <p><a href="mailto:fakeemail@veryfake.org?subject=Hi&body=I%20am%20fake">Email</a> </p>
+    <small>&copy; 2020 MyPracticePage</small>
+</footer>
+
+<div id="end">
+</div>
+
+<script>
+function mouseOver() {
+  document.getElementById("demo").style.color = "black";
+}
+
+function mouseOut() {
+  document.getElementById("demo").style.color = "red";
+}
+
+function mouseOver2() {
+  document.getElementById("demo2").style.color = "orange";
+}
+
+function mouseOut2() {
+  document.getElementById("demo2").style.color = "blue";
+}
+
+</script>
+
+</body>
+</html>

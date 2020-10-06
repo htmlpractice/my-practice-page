@@ -1,0 +1,25 @@
+h1 {
+        color: red;
+        font-size: 36px;
+}
+
+p {
+	color: blue;
+	font-size: 20px;
+}
+
+.c1 {
+
+        color: green;
+        font-size: 26px;
+}
+
+.c2 {
+        color: red;
+        font-size: 20px;
+}
+
+.c3 {
+        color: turquoise;
+        font-size = 20px;
+}
